@@ -11,4 +11,4 @@ class Transcript:
     def gpa(self):
         if self.maximum_possible_score == 0:
             return 4.0
-        return (self.total_earned_score / self.maximum_possible_score) * 4
+        return round((self.total_earned_score / self.maximum_possible_score) * 4, 2)

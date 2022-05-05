@@ -123,14 +123,14 @@ def main():
                     options = [option['option'] for option in task['options']]
                     GameScreen.updateChoices(options)
                 case 12:
-                    future = "Seriously..? Below 3.0?! You are unemployed :'("
-                    if not research_score and not internship_score:
-                        future = "You wasted all 3 Summers! You are unemployed :'("
-                    elif transcript.gpa >= 3.0:
-                        if research_score > internship_score:
-                            future = "Good GPA and Good Research portfolio :) Off to Grad School!"
-                        else:
-                            future = "Good GPA and Good Internship experience :) You got a Fulltime JOB!"
+                    if transcript.gpa < 3.0:
+                        future = "Seriously..? Below 3.0?! You are unemployed :'("
+                    elif not research_score and not internship_score:
+                        future = "Good GPA but... wasted all 3 Summers! You are unemployed :'("
+                    elif research_score > internship_score:
+                        future = "Good GPA and Good Research portfolio :) Off to Grad School!"
+                    else:
+                        future = "Good GPA and Good Internship experience :) You got a Fulltime JOB!"
 
                     GameScreen.updateDialogue(
                         future
@@ -199,3 +199,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    print('Thanks for playing Surviving-UIUC ;)')
