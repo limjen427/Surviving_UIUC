@@ -1,5 +1,5 @@
 class Screen:
-    def __init__(self, name="", grade="", future="", dialogue="", choices=""):
+    def __init__(self, name="", grade="", future="", dialogue="Welcome to Surviving UIUC!", choices=""):
         super(Screen, self).__init__()
         self.screen = ""
         self.name = name
@@ -135,9 +135,3 @@ def makeBoarderLine():
         line += "-"
     line += "\n"
     return line
-
-
-# screen = Screen("Wan", "Sophomore", "Not good", "What class will you take?", [
-#                 "what is my name?", "what is your name?", "I am smart!"])
-# screen.makeScreen()
-# print(screen.screen)

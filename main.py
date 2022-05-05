@@ -8,14 +8,22 @@ def main():
     GameScreen.makeScreen()
     while is_playing:
         print(GameScreen.screen)
+        match phase:
+            case 0:
+                if not GameScreen.name:
+                    userInput = input("Please type your name: ")
+                    GameScreen.updateName(userInput)
 
-        if not GameScreen.name:
-            userInput = input("Please type your name: ")
-            GameScreen.updateName(userInput)
+                GameScreen.updateGrade("Freshman")
 
-        if not GameScreen.grade:
-            userInput = input("Please type your grade (Example: Sophomore): ")
-            GameScreen.updateGrade(userInput)
+                phase += 1
+                continue
+            case 1:
+                pass
+            case 2:
+                pass
+            case 3:
+                pass
 
         endGame = input("Press q to end game.")
         if endGame == "q":
