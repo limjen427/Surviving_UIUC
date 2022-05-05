@@ -71,7 +71,7 @@ class Screen:
                     return makeDefaultLine()
             case 16:
                 if len(self.choices) > 0:
-                    choice_string = f"3: {self.choices[1]}"
+                    choice_string = f"2: {self.choices[1]}"
                     return makeLineAtMiddle(choice_string)
                 else:
                     return makeDefaultLine()
